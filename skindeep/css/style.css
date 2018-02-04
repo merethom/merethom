@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: Helvetica, Arial, Sans-serif;
+	width:640px;
+	padding-right:0px;
+	margin:0;
+}
+	
+	
+ul{
+	list-style:none;
+}
+
+.imgContainer{ /* Generic image container used for some elements on the search screen. */
+	width:640px;
+	hight:auto;
+	align:block;
+}
+
+.splash{ /* This is the image on the splash screen. */
+	position:absolute;
+	background-image:url(../images/splash.png);
+	width:640px;
+	height:960px;
+}
+
+a          { color:#000; text-decoration:none;  outline:none;}
+a:link     { color:#000; text-decoration:none;  outline:none;}
+a:active    { color:#787878; text-decoration:none;  outline:none;}
+
+
+/* TYPOGRAPHY */
+
+/*
+I have used H tages to style typography
+whereever possible. Helvetica is the only
+typeface used in the app and is declared
+in the body. H tags are used to change
+the weight, size, and color of the type.
+*/
+
+h1{ /* H1 is the top heading in the grey header bar. */
+	font-size:40px;
+	font-weight:300;
+	color:#ffffff;
+}
+
+h2{ /* H2 is the subtitle in the grey header bar. */
+	display:block;
+	font-size:21px;
+	font-weight:300;
+	color:#ffffff;
+}
+
+
+h3 { /* H3 is the brand name in the search result list. */
+	display:inline;
+	font-size:36px;
+} 
+
+h4 { /* H4 is the description following the brand name in the search result list. */
+	display:inline;
+	font-size:26px;
+}
+
+
+h5 {  /* H5 is the colour coded safety rating for a product or ingredient. */
+	position:relative;
+	font-size:22px;
+}
+
+h6{
+	padding:0;
+	margin:0;
+	font-size:22px;
+	font-weight:400;
+	line-height:30px;
+}
+
+h7{
+	padding:0;
+	margin:0;
+	font-size:22px;
+	font-weight:400;
+	line-height:25px;
+}
+
+h8{
+	padding:0;
+	margin:0;
+	font-size:20px;
+	font-weight:400;
+	line-height:26px;
+	color:#767676;
+}
+
+select { 
+	display:inline;
+}
+
+
+
+/* SAFETYSLIDER ELEMENTS */
+.safetySliderContainer{
+	display:block;
+	position:relative;
+	margin:30px 0px 0px 14px;
+	width:100%;
+	height:80px;
+}
+
+.safetySlider{ 
+	display:inline-block;
+	position:relative;
+	height:40px;
+	width:40px;
+	font-size:30px;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-align:center;
+	margin-left:11px;
+	line-height:42px;
+}
+
+.slider{
+	display:block;
+	position:relative;
+	margin:-4px 0 0 24px;
+	height:14px;
+	width:556px;
+	background-image:url(../images/slider.png);
+}
+
+
+/* GREY HEADER BAR */
+
+/*
+This header bar is used as a wayfinding 
+mechanism and appears at the top of every page 
+other than the loading screen and search page.
+*/
+
+.header{ /* This is the background of the header bar. */
+	display:inline-block;
+	position:relative;
+	width:100%;
+	height:120px;
+	background-color:#787878;	
+}
+
+.header_Text{ /* This contains the header text. A z-idex is used to keep it from blocking the back button. */
+	z-index:0;
+	display:inline-block;
+	position:relative;
+	height:100%;
+	width:460px;
+	padding:0px;
+	margin:23px 0px 0px 150px;
+}
+
+.header_Text2{ /* This contains the header text. A z-idex is used to keep it from blocking the back button. */
+	z-index:0;
+	display:inline-block;
+	position:relative;
+	height:100%;
+	width:460px;
+	padding:0px;
+	margin:23px 0px 0px 25px;
+}
+
+.backBTN{ /* Back button. */
+	z-index:1;
+	position:absolute;
+	height:60px;
+	width:128px;
+	padding:0px;
+	margin:28px 0px 0px 22px;
+	background-image:url(../images/backBTN.png);
+}
+
+.backBTN:active{ /* Pseudo class for the back button; its z-index must be higher than .header_Text. */
+	background-image:url(../images/backBTN-active.png);
+}
+
+.addBTN{
+	z-index:1;
+	position:absolute;
+	height:60px;
+	width:66px;
+	margin:28px 0 0 550px;
+	background-image:url(../images/addBTN.png);
+}
+
+.addBTN:active{ /* Pseudo class for the back button; its z-index must be higher than .header_Text. */
+	background-image:url(../images/addBTN-active.png);
+}
+
+.enterBTN{
+	z-index:1;
+	position:absolute;
+	height:60px;
+	width:128px;
+	margin:28px 0 0 488px;
+	background-image:url(../images/enterBTN.png);
+}
+
+.enterBTN:active{ /* Pseudo class for the back button; its z-index must be higher than .header_Text. */
+	background-image:url(../images/enterBTN-active.png);
+}
+
+
+
+
+
+/* RESULTS PAGE ELEMENTS */
+
+/*
+This page is a list of products returned
+by a search. Some elements from this
+section are reused on the product page.
+*/
+
+.result{ /* The container that each search result appears in. */
+	display:block;
+	height:98px;
+	width:100%;
+	background-image:url(../images/result_bg.png);
+	border-bottom:2px solid #999999;
+}
+
+.result:active{ /* Pseudo class for the search result container. */
+	background-color:#e1e1e1;
+}
+
+.result_Text{ /* Contains the text that appears in each search result. */
+	display:inline-block;
+	position:absolute;
+	height:98px;
+	width:560px;
+	padding:15px 0px 0px 10px;
+}
+
+.hazard_Text{ /* Contains all text that appears on an product or ingredient page. */
+	display:inline-block;
+	position:relative;
+	height:100%;
+	width:560px;
+	padding:15px 0px 0px 42px;
+}
+
+.results_coloredSidebar{ /* Colored side bar indicated hazard level. */
+	display:inline-block;
+	height:98px;
+	width:22px;
+}
+
+.coloredSidebar{ /* Colored side bar indicated hazard level. */
+	float:left;
+	position:fixed;
+	height:100%;
+	width:22px;
+}
+
+.result_Sort{ /* Light grey bar containing result select box. */
+	display:block;
+	position:relative;
+	height:98px;
+	width:100%;
+}
+
+
+
+
+
+/* CUSTOM DROP DOWN MENU STYLING */
+
+/*
+The menu is styled using a CSS workaround
+to create the appearence of a customized select
+dropdown. I initially attempted to create the
+a customized drop down menu using jQuery, but
+all of the solutions I found removed the actual
+funtionality of the select dropdown. While this
+solution does not look correct in a desktop
+browser, it works perfectly in mobile safari.
+
+Styling Method Developed by Daniel Neumann
+URL: http://http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/
+*/
+
+select { /* This removes styling from the preset select menu. Note that not all styling will be removed when viewed in some broswers. */ 
+	border:none;
+	color:#000;
+	background:transparent;
+	font-size:24px;
+	font-face:Helvetica, arial, sans-serif;
+	padding:0px 0px;
+	height:58px;
+	width:470px;
+	*width:350px;
+	*background:#FFF;
+	box-shadow: none;
+}
+
+.sort_Text { /* Controls alignment of the text in the select menu. */ 
+	padding: 20px 0px 0px 20px;
+}
+
+#selectBg{ /* This creates a background to help style the select menu, but has no actual functionality. */ 
+	display:inline-block;
+	position:absolute;
+	overflow:hidden;
+	margin-left:10px;
+	width:470px;
+	-moz-border-radius: 9px 9px 9px 9px;
+	-webkit-border-radius: 9px 9px 9px 9px;
+	border-radius: 0px 0px 0px 0px;
+	box-shadow: none;
+	background: url("../images/select_arrow.gif") no-repeat scroll 435px 21px #FFF; 
+}
+
+.searchField{
+	display:inline-block;
+	position:relative;
+	margin:19px 0 0 25px;
+	width:510px;
+	height:58px;
+	background-image:url(../images/searchField.png);
+}
+
+.searchBTN{
+	z-index:1;
+	position:absolute;
+	height:60px;
+	width:66px;
+	margin:19px 0 0 11px;
+	background-image:url(../images/searchBTN.png);
+}
+
+.searchBTN:active{ /* Pseudo class for the back button; its z-index must be higher than .header_Text. */
+	background-image:url(../images/searchBTN-active.png);
+}
+
+
+
+/*
+Safety Color Classes: used for reference only.
+.0hazard{background:#99D933;}
+.1hazard{background:#BAD421;}
+.2hazard{background:#DDD011;}
+.3hazard{background:#FFCC00;}
+.4hazard{background:#FCB402;}
+.5hazard{background:#F99C03;}
+.6hazard{background:#F88405;}
+.7hazard{background:#F56C06;}
+.8hazard{background:#F35407;}
+.9hazard{background:#EF3C08;}
+.10hazard{background:#ED240A;}
+*/

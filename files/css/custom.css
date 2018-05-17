@@ -1,0 +1,20 @@
+/*----------------------------------------------
+16. CUSTOM STYLE
+------------------------------------------------*/
+
+/*
+	!!!!!!!!!!!!!!!!!!
+	Depending on your logo height you want to use, please adapt the values below
+	!!!!!!!!!!!!!!!!!!
+*/
+
+/* your logo height */
+header #logo {
+  height: 50px;
+}
+/* YOUR CUSTOM CSS */
+
+nav#main-nav ul li > a {
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+}
